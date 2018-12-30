@@ -86,7 +86,7 @@ a label {cursor: pointer;}
    width: 270px;
    background-repeat: no-repeat;
    background-size: 300px 280px;
-   background-image: url('../images/profilePicture.png');
+   background-image: url('../../images/profilePicture.png');
    clip-path: circle(120px at center);
    background-position: -8px 0px;
   /* OLD VALUE example: circle(245px, 140px, 50px); */
@@ -192,7 +192,7 @@ margin-left: 150px;
 
 #PICTURE {
    background-size: 1200px 750px;
-   background-image: url('../images/violinPicture.png');
+   background-image: url('../../images/violinPicture.png');
    height: 700px;
 	overflow: hidden;
    background-color: #5DC9C0;
@@ -220,7 +220,7 @@ margin-left: 150px;
    background-color: #ABF1DA;
 }#PICTURE {
    background-size: 1200px 750px;
-   background-image: url('../images/violinPicture.png');
+   background-image: url('../../images/violinPicture.png');
    height: 700px;
    background-color: #5DC9C0;
 }
@@ -234,7 +234,7 @@ margin-left: 150px;
 
 #rightBrain{
 
-float:right;height:350px;width:300px;background-image: url('../images/rightBrain.png');
+float:right;height:350px;width:300px;background-image: url('../../images/rightBrain.png');
 background-repeat: no-repeat;
     background-size: 240px 350px;
 	 		position:absolute;
@@ -244,7 +244,7 @@ background-repeat: no-repeat;
 }
 
 #leftBrain{
-		height:350px;width:300px;background-image: url('../images/leftBrain.png');
+		height:350px;width:300px;background-image: url('../../images/leftBrain.png');
 		background-repeat: no-repeat;
 		position:absolute;
     background-size: 240px 350px;
