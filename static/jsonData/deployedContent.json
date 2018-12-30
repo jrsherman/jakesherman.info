@@ -1,0 +1,29 @@
+{"content":[
+
+	{ "siteName":"City In The Mist"
+	,
+"siteDescription":"Test Bed Social Media Site",
+"siteLink":"<a>http://cityinthemist.com</a>"
+ }
+,
+{ "siteName":"We Go"
+	,
+"siteDescription":"Software 2: Autonomous Car Web Application"
+,
+"siteLink":"<a href='https://jsherma1.create.stedwards.edu/WeGo/'>https://jsherma1.create.stedwards.edu/WeGo/</a>"
+ }
+,
+{ "siteName":"AIG:Blackboard"
+ 	,
+ "siteDescription":"Software 2:Health Insurance Platform with IOT monitoring of Health Data"
+},
+
+{ "siteName":"Volvme"
+  ,
+"siteDescription":"Senior Project"
+,
+
+"siteLink":"<a>http://wego.com</a>"
+ }
+
+]}

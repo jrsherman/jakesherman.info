@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><!-- Begin head-->
-	<style>
-
-
-	</style>
 	<title>Me Info</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+ <!--fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu|ZCOOL+XiaoWei" rel="stylesheet">
+<!--
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Ubuntu', sans-serif; -->
 
 	<!--style sheets-->
-  <link rel="stylesheet" href="static/css/generalStyle.css">
+  <link rel="stylesheet" href="./css/generalStyle.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!--end stylesheets-->
   <!--begin javascript includes-->
@@ -30,14 +31,12 @@
 <body><!--Beging Body-->
 	<div id="onDemandDisplayBackDrop"><!--begin onDemandDisplayBackDrop-->
 	</div><!--end onDemandDisplayBackDrop-->
-
-
 	<div class="container"><!--beginContentWrapper-->
 		<div id='topFixed'></div>
 		<div class="row">
 			 <div id="navRow" class="col-sm-12">
 				 <div class="col-sm-4">
-					 <canvas  onClick="transport5()"  id="myCanvas" width="470" height="400">
+					 <canvas  onClick="executeReturnTransportPosition()"  id="myCanvas" width="470" height="400">
 						 <div  style="margin-left: 170px;margin-top: 120px;width:150px;height:150px;"></div>
 				   </canvas>
 					<div id="profPic"></div>
@@ -46,30 +45,27 @@
 				</div>
 				<div class="col-sm-4">
 					<div id="navMenue">
-						<a onClick="transport2()" href="#">ME</a>
-						<a onClick="transport3()" href="#">PICTURE</a>
-						<a onClick="transport4()" href="#">MUSIC</a>
-						<a onClick="transport7()" href="#">UX</a>
-						<a onClick="transport()" href="#">DEPLOYED</a>
-						<a href="https://github.com/Valkyries/personalProjects">GIT HUB</a>
+						<a onClick="executeTransport(this)" type='me' href="#">ME</a><br>
+						<a onClick="executeTransport(this)" type='PICTURE' href="#">PICTURE</a><br>
+						<a onClick="executeTransport(this)" type='muiscRow' href="#">MUSIC</a><br>
+						<a onClick="executeTransport(this)" type='ux' href="#">UX</a><br>
+						<a onClick="executeTransport(this)" type='DeployedSites' href="#">DEPLOYED</a><br>
+						<a target="_new" href="https://github.com/Valkyries/personalProjects">GIT HUB</a>
 					</div>
 				</div>
+
+				<script src= "./js/eventListener.js"></script>
+				<script src= "./js/documentReady.js"></script>
 				<script src= "./js/circleAnimations.js"></script>
 				<script src= "./js/functions.js"></script>
+				<script src= "./js/transport.js"></script>
 			 </div>
 			 <div id="me"class="col-sm-12">
 				 <h1>.ME</h1>
 				 <p id="meContent"></p>
-
-
-
-
-
-
 			 </div>
 			 <div id="PICTURE" class="col-sm-12">
 				 <img id='movingPicture' src="./images/violinPicture.png" height="950" width="1350">
-
 			 </div>
 			 <div id="muiscRow" class="col-sm-12">
 				 <h1>.MUSIC</h1>
@@ -77,98 +73,58 @@
 				 <p>
 					 Current Projects:<a href="http://killervking.com/">Killer V King</a>
 				 </p>
-
 			 </div>
 			 <div id="ux" class="col-sm-12">
 				 <canvas id='brainDraw' style='z-index: 20;margin-left: 150px;position:absolute;width:800px;height:400px;'></canvas>
 				 <h1>.UX V .UI</h1>
-
-				 <div class="myButton" style="border-radius:25px;z-index:24;line-height:80px;text-align: center;margin-top:75px;margin-left:400px;width:200px;height:100px;" onclick="executeUx()"><f style="font-size:30px;">.Hello_World</f></div>
-
-
-
+				 <!-- <div class="myButton" style="border-radius:25px;z-index:24;line-height:80px;text-align: center;margin-top:75px;margin-left:400px;width:200px;height:100px;" onclick="executeUx()"><f style="font-size:30px;">.Hello_World</f></div> -->
 				 <div id="leftBrain"></div>
-
-
-
-
-
-
-
-
-
-
 				 <div id="rightBrain"></div>
-
-
 				 <div class="uxInfo" onclick="moveIt()" id="sequenceDiagrams"><l>Sequence Diagrams</l>
-
 					 <table class="table table-striped">
- <thead>
-	<tr>
-	  <th>Firstname</th>
-	  <th>Lastname</th>
-	  <th>Email</th>
-	</tr>
- </thead>
- <tbody>
-	<tr>
-	  <td>John</td>
-	  <td>Doe</td>
-	  <td>john@example.com</td>
-	</tr>
-	<tr>
-	  <td>Mary</td>
-	  <td>Moe</td>
-	  <td>mary@example.com</td>
-	</tr>
-	<tr>
-	  <td>July</td>
-	  <td>Dooley</td>
-	  <td>july@example.com</td>
-	</tr>
- </tbody>
-</table>
-
-
-
-
+								 <thead>
+									<tr>
+									  <th>Firstname</th>
+									  <th>Lastname</th>
+									  <th>Email</th>
+									</tr>
+								 </thead>
+								 <tbody>
+									<tr>
+									  <td>John</td>
+									  <td>Doe</td>
+									  <td>john@example.com</td>
+									</tr>
+									<tr>
+									  <td>Mary</td>
+									  <td>Moe</td>
+									  <td>mary@example.com</td>
+									</tr>
+									<tr>
+									  <td>July</td>
+									  <td>Dooley</td>
+									  <td>july@example.com</td>
+									</tr>
+								 </tbody>
+						 </table>
 				 </div>
 				 <div class="uxInfo" id="scenarios"><l>Scenarios</l></div>
 				 <div class="uxInfo" id="usecase"><l>Usecase</l></div>
-
 				 <div class="uxInfo" id="photoshopWireframe"><l>Wireframe</l></div>
 			   <div class="uxInfo" id="styleGuide"><l>Style Guide</l></div>
 			   <div class="uxInfo" id="layout"><l>Layout</l></div>
-
 			 </div>
-
-
-
-
-
-			 <div id="PICTURE" class="col-sm-12">
+			 <div id="PICTURE2" class="col-sm-12">
 				 <img id='movingPicture2' src="./images/bubbleFish.jpeg" height="1250" width="1400">
-
 			 </div>
-
-
-
 			 <div id="DeployedSites" class="col-sm-12">
 				 <h1>.DeployedSites</h1>
 				 <p id="deployedContent"> </p>
 			 </div>
-
 			 <div id="contact" class="col-sm-12">
 				 <h1>.contact</h1>
-
-
-
-
 				 <form id="contact-form" method="post" action="contact.php" role="form">
-
 						<div class="messages"></div>
-
 						<div class="controls">
 							 <div class="row">
 								  <div class="col-lg-6">
@@ -211,49 +167,15 @@
 										data-error="Please, leave us a message."></textarea>
 								  <div class="help-block with-errors"></div>
 							 </div>
-
-
-
-
-
 							 <input type="submit" class="btn btn-success btn-send" value="Send message">
-
-
-
 						</div>
 
 				  </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			 </div>
 		</div>
 		<div class="row"></div>
 		<div class="row"></div>
 		<div class="row"></div>
 	</div><!--endContentWrapper-->
-
-<script>
-
-
-
-
-
-
-
-</script>
-
 </body><!--End Body-->
 </html>

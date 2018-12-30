@@ -9,6 +9,11 @@
    display: none;
 }
 
+
+.row{
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
 body{
 	background-color: #c4cfd1 !important;
 }
@@ -16,15 +21,19 @@ html{
 	background-color: black;
 
 }
-p{	font-family: 'Open Sans', sans-serif;
+p{	    font-family: 'Lato', sans-serif;
 		padding:12px;
-		font-size: 15px;
-	   line-height: 1.9;
+		font-size: 20px;
+	   line-height: 2.4;
+		color:#4c567e;
 
 }
 
-a:hover{text-decoration:none;}
-a{display:block;font-size:25px;}
+a:hover{text-decoration:none !important;
+color:#7c2796 !important;}
+a:active{text-decoration:none !important;}
+
+a{font-size:25px; color:#f8d08b !important;}
 a label {cursor: pointer;}
 
 
@@ -42,9 +51,10 @@ a label {cursor: pointer;}
 
 #navRow {
    height: 400px;
-   /* background-image: url('../images/navBackGround.png'); */
+   background-image: url('../images/navBackGround.png');
    background-size: 1200px 500px;
    background-color: lavender;
+	background-repeat: no-repeat;
 }
 
 
@@ -71,10 +81,7 @@ a label {cursor: pointer;}
 
 
 }
-.container{
 
-	width:1120px !important;
-}
 
 
 #profPic {
@@ -86,7 +93,7 @@ a label {cursor: pointer;}
    width: 270px;
    background-repeat: no-repeat;
    background-size: 300px 280px;
-   background-image: url('../../images/profilePicture.png');
+   background-image: url('../images/profilePicture.png');
    clip-path: circle(120px at center);
    background-position: -8px 0px;
   /* OLD VALUE example: circle(245px, 140px, 50px); */
@@ -98,7 +105,7 @@ a label {cursor: pointer;}
    z-index: 22;
 	margin-top: -20px;
    position: absolute;
-	margin-left: -10px;
+	margin-left: -35px;
 }
 
 
@@ -109,7 +116,7 @@ a label {cursor: pointer;}
 		background-position: right top;
 	   background-repeat: no-repeat;
 	   text-align: right;
-	   background-image: url('../images/menueImage.png');
+	   /* background-image: url('../images/menueImage.png'); */
 	   height: 380px;
 	   background-size: 300px 300px;
 	   padding: 30px;
@@ -130,7 +137,7 @@ a label {cursor: pointer;}
  		background-position: right top;
  	   background-repeat: no-repeat;
  	   text-align: right;
- 	   background-image: url('../images/menueImage.png');
+ 	   /* background-image: url('../images/menueImage.png'); */
  	   height: 380px;
  	   background-size: 300px 300px;
  	   padding: 30px;
@@ -149,7 +156,7 @@ a label {cursor: pointer;}
 		  background-position: right top;
 		  background-repeat: no-repeat;
 		  text-align: right;
-		  background-image: url('../images/menueImage.png');
+		  /* background-image: url('../images/menueImage.png'); */
 		  height: 380px;
 		  background-size: 300px 300px;
 		  padding: 30px;
@@ -161,21 +168,6 @@ a label {cursor: pointer;}
 	  }
 #profPic{
 margin-left: 150px;
-}
-#movingPicture{
-
-	margin-left:-450px;
-}
-#movingPicture2{
-	margin-left:-320px;
-}
-
-
-#myCanvas {
-   z-index: 22;
-	margin-top: -20px;
-   position: absolute;
-	margin-left: 40px;
 }
 
 
@@ -192,15 +184,23 @@ margin-left: 150px;
 
 #PICTURE {
    background-size: 1200px 750px;
-   background-image: url('../../images/violinPicture.png');
+
+   height: 700px;
+	overflow: hidden;
+   background-color: #5DC9C0;
+}
+#PICTURE2 {
+   background-size: 1200px 750px;
+
    height: 700px;
 	overflow: hidden;
    background-color: #5DC9C0;
 }
 
+
 #muiscRow {
 	padding: 25px;
-   height: 400px;
+   min-height: 400px;
    background-color: #B281DF;
 }
 
@@ -216,25 +216,32 @@ margin-left: 150px;
 
 #DeployedSites {
 	padding: 25px;
-   height: 400px;
+   min-height: 300px;
    background-color: #ABF1DA;
 }#PICTURE {
    background-size: 1200px 750px;
-   background-image: url('../../images/violinPicture.png');
+
+   height: 700px;
+   background-color: #5DC9C0;
+}
+
+#PICTURE2 {
+   background-size: 1200px 750px;
+
    height: 700px;
    background-color: #5DC9C0;
 }
 
 #muiscRow {
 	padding: 25px;
-   height: 400px;
+   min-height: 450px;
    background-color: #B281DF;
 }
 
 
 #rightBrain{
 
-float:right;height:350px;width:300px;background-image: url('../../images/rightBrain.png');
+float:right;height:350px;width:300px;background-image: url('../images/rightBrain.png');
 background-repeat: no-repeat;
     background-size: 240px 350px;
 	 		position:absolute;
@@ -244,7 +251,7 @@ background-repeat: no-repeat;
 }
 
 #leftBrain{
-		height:350px;width:300px;background-image: url('../../images/leftBrain.png');
+		height:350px;width:300px;background-image: url('../images/leftBrain.png');
 		background-repeat: no-repeat;
 		position:absolute;
     background-size: 240px 350px;
@@ -255,7 +262,7 @@ background-repeat: no-repeat;
 
 #DeployedSites {
 	padding: 25px;
-   height: 400px;
+   min-height: 400px;
    background-color: #ABF1DA;
 }
 
@@ -267,9 +274,16 @@ background-repeat: no-repeat;
 
 #me {
    padding: 25px;
-   height: 400px;
+   min-height: 400px;
    background-color: #5DC9C0;
 
+
+}
+
+.container{
+width:100% !important;
+padding-left: 0px !important;
+padding-right: 0px !important;
 
 }
 
